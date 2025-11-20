@@ -1,0 +1,177 @@
+/*
+    style.formulario.css
+    - Propósito: estilos para o formulário de contato/receitas.
+    - Notas: contém regras para layout do form, botões, textarea e header.
+    - Observação: copiado/compartilhado com outras páginas (sobre, receitas, bebidas) quando apropriado.
+*/
+/* Estilos gerais para o corpo da página */
+body {
+    background-image: image-set(
+        url("../../PaginaPrincipal/img/Gemini_Generated_Image_hexlophexlophexl.png") 1x,
+        url("../../PaginaPrincipal/img/Gemini_Generated_Image_hexlophexlophexl@2x.png") 2x
+    );
+    background-image: url("../../PaginaPrincipal/img/Gemini_Generated_Image_hexlophexlophexl.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    margin: 0;
+    font-family: 'Times', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.p-instrucoes-formulario {
+    /* Parágrafo de instruções no topo do formulário
+       - destacado para orientar o usuário sobre o preenchimento
+    */
+    text-align: center;
+    font-size: 2.0em;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+p{
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.desalinhado{
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+/* Container principal para centralizar e adicionar borda com gradiente */
+form, header {
+    max-width: 800px;
+    width: 90%;
+    margin: 20px auto;
+    padding: 30px;
+    border-radius: 15px;
+    background: linear-gradient(180deg,
+        rgba(0,0,0,1) 0%,
+        rgba(30,8,8,0.95) 25%,
+        rgba(90,18,18,0.85) 55%,
+        rgba(140,30,30,0.9) 80%,
+        rgba(173,44,44,1) 100%
+    );
+    box-shadow: 
+        0 0 10px rgba(255, 255, 255, 0.8),
+        0 0 20px rgba(255, 255, 255, 0.6),
+        0 0 30px rgba(255, 255, 255, 0.4);
+}
+
+/* Estilo para o título principal */
+.titulo {
+    font-size: 2.5em; /* Tamanho da fonte (2.5 vezes o tamanho padrão) */
+    text-align: center; /* Alinhamento centralizado do texto */
+    color: rgb(255, 255, 255); /* Cor do texto branca */
+    padding: 0; /* Remove espaçamento interno */
+    height: 75px; /* Altura fixa */
+    display: flex; /* Ativa flexbox */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+}
+
+
+form label {
+    display: inline-block; /* Transforma o label em um elemento de bloco inline */
+    width: 150px; /* Largura fixa de 150 pixels para todos os labels */
+    text-align: left; /* Alinha o texto do label à esquerda */
+    margin-right: 10px; /* Adiciona 10px de margem à direita para espaçamento */
+    margin-bottom: 10px;/* Adiciona 10px de margem abaixo para espaçamento vertical */
+}
+
+.desalinhado {
+    display: inline !important; /* Volta ao display inline padrão (sobrescreve inline-block) */
+    width: auto !important; /* Largura automática (remove a largura fixa de 150px) */
+    text-align: left !important; /* Mantém alinhamento à esquerda (já era left mesmo) */
+    margin-right: 0 !important;  /* Remove completamente a margem direita */
+    margin-bottom: 0 !important; /* Remove completamente a margem inferior */
+}
+
+/* Estilo para a área de texto (textarea) */
+#mensagem_da_sua_receita {
+    background: linear-gradient(180deg,
+        rgba(0,0,0,1) 0%,
+        rgba(30,8,8,0.95) 25%,
+        rgba(90,18,18,0.85) 55%,
+        rgba(140,30,30,0.9) 80%,
+        rgba(173,44,44,1) 100%
+    ); /* Gradiente de fundo */
+    color: white; /* Cor do texto */
+    border: 2px solid white; /* Borda branca */
+    border-radius: 15px; /* Cantos arredondados */
+    padding: 15px; /* Espaçamento interno */
+    font-family: Arial, sans-serif; /* Tipo de fonte */
+    font-size: 16px; /* Tamanho da fonte */
+    resize: vertical; /* Permite redimensionamento apenas vertical */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
+}
+
+/* Estilo quando o textarea está em foco (selecionado) */
+#mensagem_da_sua_receita:focus {
+    outline: none; /* Remove contorno padrão do navegador */
+    border-color: #ffffff; /* Mantém a borda branca */
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.6); /* Sombra branca mais intensa */
+}
+
+/* Estilo para o texto placeholder do textarea */
+#mensagem_da_sua_receita::placeholder {
+    color: rgba(255, 255, 255, 0.7); /* Placeholder com opacidade reduzida */
+}
+
+/* Estilização do footer */
+footer {
+    width: 90%;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    text-align: center;
+    border-radius: 15px;
+    background: linear-gradient(180deg,
+        rgba(0,0,0,1) 0%,
+        rgba(30,8,8,0.95) 25%,
+        rgba(90,18,18,0.85) 55%,
+        rgba(140,30,30,0.9) 80%,
+        rgba(173,44,44,1) 100%
+    );
+    box-shadow: 
+        0 0 10px rgba(255, 255, 255, 0.8),
+        0 0 20px rgba(255, 255, 255, 0.6),
+        0 0 30px rgba(255, 255, 255, 0.4);
+}
+
+/* Estilo base para os botões */
+.meu-botao {
+    background-color: rgb(255, 255, 255); /* Fundo branco */
+    color: rgb(0, 0, 0); /* Texto preto */
+    padding: 10px 20px; /* Espaçamento interno */
+    border: none; /* Remove borda padrão */
+    border-radius: 5px; /* Cantos levemente arredondados */
+    cursor: pointer; /* Cursor de pointer ao passar o mouse */
+    font-size: 16px; /* Tamanho da fonte */
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease; /* Transições suaves */
+}
+
+/* Estilo para botões quando o mouse passa por cima (hover) */
+.meu-botao:hover {
+    background: linear-gradient(180deg,
+        rgba(0,0,0,1) 0%,
+        rgba(30,8,8,0.95) 25%,
+        rgba(90,18,18,0.85) 55%,
+        rgba(140,30,30,0.9) 80%,
+        rgba(173,44,44,1) 100%
+    ); /* Gradiente no hover */
+    color: white; /* Texto branco no hover */
+    transform: translateY(-2px); /* Efeito de levitação (movimento para cima) */
+}
+
+a {
+    color: white !important; /* Muda a cor de todos os links para branco */
+    text-decoration: none !important; /* Remove sublinhado de todos os links */
+}
